@@ -1,0 +1,40 @@
+; Vinski Blitz Basic Code
+; Appname "Vinski"
+
+Graphics 800,600,16,1
+SetBuffer BackBuffer ()
+dir = LoadImage ("director.bmp")
+bob = LoadImage ("bob.bmp")
+
+
+bg = LoadImage ("bg.bmp")
+
+
+bar = LoadImage ("holeguy.bmp")
+MaskImage dir, 255, 255, 255
+MaskImage bob, 255,255,255
+MaskImage bar, 255,255,255
+
+x = 320
+y = 340
+player = dir
+Repeat
+
+	Cls
+	
+	If KeyDown (203) Then x = x - 10 ; Left cursor
+	If KeyDown (205) Then x = x + 10 ; Right cursor
+	If KeyDown (200) Then y = y - 10 ; Up cursor
+	If KeyDown (208) Then y = y + 10 ; Down cursor
+
+If KeyDown (16) Then player = dir ;Q
+If KeyDown (17) Then player = bob ;W
+If KeyDown (18) Then player = bar ;E
+
+
+DrawImage bg, 0,0
+
+DrawImage player, x, 450	; Draw the image
+Flip
+Until KeyHit (1)
+End
