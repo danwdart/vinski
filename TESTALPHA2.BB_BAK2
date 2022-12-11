@@ -43,7 +43,7 @@ player = dir
 Repeat
 
 	Cls
-	
+
 	If KeyDown (203) Then x = x - 10 ; Left cursor
 	If KeyDown (205) Then x = x + 10 ; Right cursor
 	If KeyDown (200) Then y = y - 10 ; Up cursor

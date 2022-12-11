@@ -37,7 +37,7 @@ SetBuffer BackBuffer()
 Message 0,0, "Welcome to Vinski"
 Message 0,100, "Rules: Object is to shoot other player down"
 Message 0,200, "Player 1 Controls: Arrow keys and Enter to shoot.
-Message 0,300, "Player 2 Controls: Numpad keys, 4 left, 
+Message 0,300, "Player 2 Controls: Numpad keys, 4 left,
 Message 0,400, "6 Right, 8 up, 2 down, 5 To shoot."
 Message 0,500, "Click to continue..."
 Flip
@@ -62,7 +62,7 @@ Message 300,100,"Player 1"
 
 If Checkmouse (0,200,200,400,1)=True Then
 player = dir
-Exit:Exit 
+Exit:Exit
 ElseIf Checkmouse (200,200,400,400,1)= True Then
 player = bob
 Exit:Exit
@@ -143,9 +143,9 @@ SetBuffer BackBuffer ()
 Repeat
 
 	Cls
-	
 
-	
+
+
 	If KeyDown (203) Then x = x - 20 ; Left cursor
 	If KeyDown (205) Then x = x + 20 ; Right cursor
 	If KeyDown (200) Then y = y - 20 ; Up cursor
@@ -231,7 +231,7 @@ Text 0,550,"Player 1 lives: "+player1lives+" Player 2 lives: "+player2lives
 
 Flip
 If ChannelPlaying (chnMusic) = False Then chnMusic = PlayMusic ("mus" + I + ".mp3")
- 
+
 Until KeyHit(1)
 
 Next

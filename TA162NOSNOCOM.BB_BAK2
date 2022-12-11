@@ -146,9 +146,9 @@ SetBuffer BackBuffer ()
 Repeat
 
 	Cls
-	
 
-	
+
+
 If KeyDown (203) Then x = x - inc ; Left cursor
 If KeyDown (205) Then x = x + inc ; Right cursor
 If KeyDown (200) Then y = y - inc ; Up cursor
@@ -205,13 +205,13 @@ If y2 > 400 Then y2 = 400
 
 
 DrawImage bg, 0,0
-DrawImage player, x, y	
+DrawImage player, x, y
 DrawImage player2, x2, y2
 
 
 Flip
 If ChannelPlaying (chnMusic) = False Then chnMusic = PlayMusic ("mus" + I + ".mp3")
- 
+
 Until KeyHit(1)
 
 Next

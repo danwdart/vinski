@@ -154,9 +154,9 @@ SetBuffer BackBuffer ()
 Repeat
 
 	Cls
-	
 
-	
+
+
 If KeyDown (203) Then x = x - inc ; Left cursor
 If KeyDown (205) Then x = x + inc ; Right cursor
 If KeyDown (200) Then y = y - inc ; Up cursor
@@ -262,14 +262,14 @@ DrawImage bg, 0,0
 ;If player2shoot = 1 Then gun1p2 = gun1p2 + 30: gun2p2 = gun2p2 -30: Line gun1p2,y2s + 100,gun1p2+100,y2s+100:Line gun2p2,y2s+100,gun2p2+100,y2s+100
 
 
-DrawImage player, x, y	
+DrawImage player, x, y
 DrawImage player2, x2, y2
 ;Text 0,550,"Player 1 lives: "+player1lives+" Player 2 lives: "+player2lives
 
 
 Flip
 If ChannelPlaying (chnMusic) = False Then chnMusic = PlayMusic ("mus" + I + ".mp3")
- 
+
 Until KeyHit(1)
 
 Next
